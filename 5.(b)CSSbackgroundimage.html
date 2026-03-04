@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>Tilted Background Image</title>
+    <style>
+	body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+	line-height: 1.6;
+	}
+
+		/* Tilted background image */
+
+	body::before {
+	content: "";
+	position: fixed;                 /* Image stays fixed while scrolling */
+	top: 50%;                        /* Halfway down the page */
+	left: 0;
+	width: 100%;
+	height: 300px;                   /* Adjust image area */
+
+	background: url("https://picsum.photos/1200/400") no-repeat center;
+	background-size: cover;
+
+	transform: translateY(-50%) rotate(-8deg);        /* Center + tilt */
+	z-index: -1;                                      /* Behind content */
+	opacity: 0.6;                                    /* Optional transparency */
+	}
+
+		/* Page content for scrolling */
+
+	.content {
+	padding: 40px;
+	}
+
+	.section {
+	height: 600px;
+	}
+    </style>
+  </head>
+  <body>
+	<div class="content">
+	    <h1>Tilted Fixed Background Example</h1>
+	    <p>Scroll the page. The tilted image stays in the same position.</p>
+
+	    <div class="section">
+	    <h2>Section 1</h2>
+	    <p>Content goes here...</p>
+	    </div>
+
+	    <div class="section">
+	    <h2>Section 2</h2>
+	    <p>More content...</p>
+	    </div>
+
+	    <div class="section">
+	    <h2>Section 3</h2>
+	    <p>Even more content...</p>
+	    </div>
+	</div>
+  </body>
+</html>
