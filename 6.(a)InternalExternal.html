@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>Internal and External JavaScript Example</title>
+
+		<!-- Internal JavaScript -->
+
+    <script>
+	function showInternal() {
+	document.getElementById("internalMsg").innerHTML =
+	"Hello! This message is from Internal JavaScript.";
+	}
+    </script>
+
+		<!-- External JavaScript Link -->
+
+    <script src="script.js"></script>
+      <style>
+	body {
+	font-family: Arial, sans-serif;
+	text-align: center;
+	background-color: #f2f2f2;
+	margin-top: 50px;
+	}
+
+	button {
+	padding: 10px 20px;
+	margin: 10px;
+	font-size: 16px;
+	}
+
+	p {
+	font-size: 18px;
+	font-weight: bold;
+	color: #333;
+	}
+      </style>
+  </head>
+  <body>
+	<h2>Embedding Internal and External JavaScript</h2>
+
+		<!-- Internal JavaScript Example -->
+
+	<button onclick="showInternal()">Run Internal JavaScript</button>
+	<p id="internalMsg"></p>
+
+		<!-- External JavaScript Example -->
+
+	<button onclick="showExternal()">Run External JavaScript</button>
+	<p id="externalMsg"></p>
+  </body>
+</html>

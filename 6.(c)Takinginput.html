@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>JavaScript Input Methods</title>
+
+		<!-- Internal JavaScript -->
+
+    <script>
+	function showInternalInput() {
+	// Taking input using prompt
+	var name = prompt("Enter your name:");
+	// Display using alert
+	alert("Hello " + name);
+	// Display using document.write
+	document.write("<h3>Your name is: " + name + "</h3>");
+	}
+    </script>
+
+		<!-- External JavaScript -->
+
+    <script src="script.js"></script>
+  </head>
+  <body>
+	<h2>JavaScript Input Methods Example</h2>
+	<button onclick="showInternalInput()">Internal JS Input</button>
+	<button onclick="showExternalInput()">External JS Input</button>
+	<button onclick="takeInput()">Input and Type Conversion</button>
+	<p id="demo"></p>
+  </body>
+</html>
