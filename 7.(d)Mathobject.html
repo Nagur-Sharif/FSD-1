@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>Math Object Example</title>
+  </head>
+  <body>
+	<h2>Math Object Demo</h2>
+	<p id="result"></p>
+    <script>
+	let num = 16;
+	let output = "";
+	output += "Square Root: " + Math.sqrt(num) + "<br>";
+	output += "Power (2^3): " + Math.pow(2, 3) + "<br>";
+	output += "Rounded (4.7): " + Math.round(4.7) + "<br>";
+	output += "Ceil (4.2): " + Math.ceil(4.2) + "<br>";
+	output += "Floor (4.9): " + Math.floor(4.9) + "<br>";
+	output += "Random Number: " + Math.random() + "<br>";
+	output += "Value of PI: " + Math.PI;
+
+	document.getElementById("result").innerHTML = output;
+    </script>
+  </body>
+</html>

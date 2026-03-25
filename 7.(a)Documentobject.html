@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>Document Object Example</title>
+  </head>
+  <body>
+	<h2 id="title">Welcome to JavaScript</h2>
+	<p id="para">This is original text.</p>
+	<button onclick="changeContent()">Change Content</button>
+	<button onclick="showObject()">Show User Object</button>
+    <script>
+
+		// USER-DEFINED OBJECT
+
+	var student = {
+	name: "Nagur Sharif",
+	age: 19,
+	course: "Data Science",
+
+	display: function() {
+	return "Name: " + this.name + 
+	"<br>Age: " + this.age + 
+	"<br>Course: " + this.course;
+	  }
+	};
+
+		// FUNCTION USING DOCUMENT OBJECT
+
+	function changeContent() {
+	document.getElementById("title").innerHTML = "Content Changed!";
+	document.getElementById("para").style.color = "blue";
+	document.bgColor = "lightyellow"; // document property
+	}
+
+	function showObject() {
+	document.getElementById("para").innerHTML = student.display();
+	}
+    </script>
+  </body>
+</html>

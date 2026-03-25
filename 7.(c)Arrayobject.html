@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>Array Example</title>
+  </head>
+  <body>
+	<h3>Array Properties & Methods</h3>
+	<p id="demo"></p>
+    <script>
+	let arr = [10, 5, 20];
+	let output = "";
+
+		// Property
+
+	output += "Original Array: " + arr + "<br>";
+	output += "Length: " + arr.length + "<br><br>";
+
+		// Methods
+	arr.push(30); // add
+	output += "After push: " + arr + "<br>";
+
+	arr.pop(); // remove last
+	output += "After pop: " + arr + "<br>";
+
+	arr.sort(); // sort
+	output += "After sort: " + arr + "<br>";
+
+	arr.reverse(); // reverse
+	output += "After reverse: " + arr + "<br>";
+
+	output += "Index of 10: " + arr.indexOf(10);
+
+		// Display
+
+	document.getElementById("demo").innerHTML = output;
+    </script>
+  </body>
+</html>

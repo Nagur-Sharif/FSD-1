@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>String Object Example</title>
+  </head>
+  <body>
+	<h2>String Object Properties and Methods</h2>
+	<p id="output"></p>
+    <script>
+
+		// Create a string
+
+	let text = "Hello JavaScript";
+
+		// Using string properties and methods
+
+	let length = text.length;              // property
+	let upper = text.toUpperCase();       // method
+	let lower = text.toLowerCase();       // method
+	let char = text.charAt(6);            // method
+	let index = text.indexOf("Java");     // method
+	let slice = text.slice(6, 16);        // method
+	let replace = text.replace("JavaScript", "World"); // method
+
+		// Display output
+
+	document.getElementById("output").innerHTML =
+	"Original String: " + text + "<br><br>" +
+	"Length: " + length + "<br>" +
+	"Uppercase: " + upper + "<br>" +
+	"Lowercase: " + lower + "<br>" +
+	"Character at position 6: " + char + "<br>" +
+	"Index of 'Java': " + index + "<br>" +
+	"Slice (6 to 16): " + slice + "<br>" +
+	"After Replace: " + replace;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>Window Object Example</title>
+  </head>
+  <body>
+	<h2>Window Object Demo</h2>
+	<button onclick="showInfo()">Show Window Info</button>
+	<button onclick="openNew()">Open New Window</button>
+	<button onclick="closeWin()">Close Window</button>
+	<button onclick="showAlert()">Show Alert</button>
+	<p id="output"></p>
+    <script>
+	var newWin;
+
+	function showInfo() {
+	let info = "";
+	info += "Window Inner Width: " + window.innerWidth + "<br>";
+	info += "Window Inner Height: " + window.innerHeight + "<br>";
+	info += "Current URL: " + window.location.href + "<br>";
+	info += "Browser Name: " + window.navigator.appName + "<br>";
+
+	document.getElementById("output").innerHTML = info;
+	}
+
+	function openNew() {
+	newWin = window.open("https://www.google.com", "_blank", "width=400,height=400");
+	}
+
+	function closeWin() {
+	if (newWin) {
+	  newWin.close();
+	} else {
+	  alert("No window opened!");
+	  }
+	}
+
+	function showAlert() {
+	window.alert("This is an alert using window object!");
+	}
+    </script>
+  </body>
+</html>

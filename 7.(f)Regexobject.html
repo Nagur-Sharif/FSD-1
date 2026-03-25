@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>RegExp Object Example</title>
+  </head>
+  <body>
+	<h2>RegExp Object Demo</h2>
+	<p id="output"></p>
+    <script>
+
+		// Create RegExp object (pattern to find "hello", case-insensitive)
+	var pattern = /hello/i;
+
+		// String to test
+
+	var text = "Hello World! hello JavaScript!";
+
+		// Using test() method (returns true/false)
+
+	var testResult = pattern.test(text);
+
+		// Using exec() method (returns matched result)
+
+	var execResult = pattern.exec(text);
+
+		// Using match() method (with global flag)
+
+	var patternGlobal = /hello/gi;
+	var matchResult = text.match(patternGlobal);
+
+		// Display results
+
+	document.getElementById("output").innerHTML =
+	"Text: " + text + "<br><br>" +
+	"Using test(): " + testResult + "<br>" +
+	"Using exec(): " + execResult + "<br>" +
+	"Using match(): " + matchResult + "<br><br>" +
+
+	"RegExp Properties:<br>" +
+	"Global: " + patternGlobal.global + "<br>" +
+	"Ignore Case: " + pattern.ignoreCase + "<br>" +
+	"Multiline: " + pattern.multiline;
+    </script>
+  </body>
+</html>
